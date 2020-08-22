@@ -256,8 +256,18 @@
             </li>
           </ul>
         </div>
+        <!-- Добавляет форму подписки -->
         <div class="subscribe">
-          <!-- <p class="subscribe-title">подпишитесь на рассылку</p> -->
+          <p class="subscribe-title">подпишитесь на рассылку</p>
+          <form action="" method="POST">
+            <input class="email-field" type="email" placeholder="E-mail" name="subscribe" required />
+            <button type="submit" class="subscribe-button">
+              Подписаться
+              <svg class="icon-send">
+                <use href="./images/icons/sprite.svg#iconsend"></use>
+              </svg>
+            </button>
+          </form>
         </div>
       </div>
     </footer>
