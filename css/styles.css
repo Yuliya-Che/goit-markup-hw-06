@@ -49,8 +49,8 @@
 
 /* Стилизирует кнопку Заказать услугу при hover и focus */
 .btn:hover,
-.button:focus,
-.button:active {
+.btn:focus,
+.btn:active {
   color: var(--accent-color);
   background-color: var(--total-white);
 }
@@ -296,19 +296,10 @@
 .customers-item {
   width: calc((100% - 150px) / 6);
   height: 90px;
-  border: 1px solid var(--svg-color);
-  border-radius: 4px;
-
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customers-item:not(:last-child) {
   margin-right: 30px;
-}
-
-.customers-item:hover,
-.customers-item:focus {
-  border-color: var(--accent-color);
 }
 
 .customer-link {
@@ -319,21 +310,30 @@
   height: 90px;
   margin: 0;
   padding: 0;
-  fill: var(--svg-color);
+  border: 1px solid var(--svg-color);
+  border-radius: 4px;
 
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customer-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   fill: var(--svg-color);
+
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Добавляет эффекты ховера и фокуса на иконки клиентов */
-.customer-icon:hover,
-.customer-icon:focus {
-  fill: var(--accent-color);
+.customer-link:hover,
+.customer-link:focus,
+.customer-link:active {
+  border: 1px solid var(--accent-color);
 }
-.customer-icon:active {
+
+/* Добавляет эффекты ховера и фокуса на иконки клиентов */
+.customer-link:hover .customer-icon,
+.customer-link:focus .customer-icon,
+.customer-link:active .customer-icon {
   fill: var(--accent-color);
 }
